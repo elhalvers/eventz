@@ -11,24 +11,10 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <%= link_to image_tag("logo.png"), root_path %>
-        <ul>
-          <li>
-            <%= link_to "All Events", events_path %>
-          </li>
-      </nav>
-    </header>
-   <div class="content"> 
-     <%= yield %>
-   </div>
-
-   <footer>
-     <p>
-       Made by Eric Halverson
-     </p>
-
-   </footer>
+    <%= render "layouts/header" %>
+    <div class="content"> 
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
